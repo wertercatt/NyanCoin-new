@@ -232,7 +232,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
         PastRateAdjustmentRatio = double(1);
         if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
         if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0) {
-        PastRateAdjustmentRatio = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
+            PastRateAdjustmentRatio = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
         }
         EventHorizonDeviation = 1 + (0.7084 * pow((double(PastBlocksMass)/double(144)), -1.228));
         EventHorizonDeviationFast = EventHorizonDeviation;
