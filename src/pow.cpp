@@ -278,7 +278,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
     printf("PastRateAdjustmentRatio = %g\n", PastRateAdjustmentRatio);
     printf("Before: %08x %s\n", BlockLastSolved->nBits, ArithToUint256(arith_uint256().SetCompact(BlockLastSolved->nBits)).ToString().c_str());
     printf("After : %08x %s\n", bnNew.GetCompact(), ArithToUint256(bnNew).ToString().c_str());
-
+    //printf("POWLimit: %s\nOldLimit: %s\n", params.powLimit.ToString().c_str(), ArithToUint256(bnProofOfWorkLimit).ToString().c_str());
 
     return bnNew.GetCompact();
 }
