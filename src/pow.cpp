@@ -274,6 +274,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
     }
 
     /// debug print
+    printf("Height: %d\n", pindexLast->nHeight +1);
     printf("Difficulty Retarget - Kimoto Gravity Well\n");
     printf("PastRateAdjustmentRatio = %g\n", PastRateAdjustmentRatio);
     printf("Before: %08x %s\n", BlockLastSolved->nBits, ArithToUint256(arith_uint256().SetCompact(BlockLastSolved->nBits)).ToString().c_str());
