@@ -75,12 +75,12 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 500000;
-        /*
-            consensus.BIP34Height = 710000;
+        
+            consensus.BIP34Height = 999999999;
             consensus.BIP34Hash = uint256S("fa09d204a83a768ed5a7c8d441fa62f2043abf420cff1226c7b4329aeb9d51cf");
-            consensus.BIP65Height = 918684; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
-            consensus.BIP66Height = 811879; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
-        */
+            consensus.BIP65Height = 999999999; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
+            consensus.BIP66Height = 999999999; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
+        
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 3 * 60 * 60; // NyanCoin: 3 hours
         consensus.nPowTargetSpacing = 60; // NyanCoin: 1 minute blocks
@@ -105,10 +105,11 @@ public:
         */
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000ba50a60f8b56c7fe0");
+        //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000008977c5d7dfb02a884f6e");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000001787975b34");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x29c8c00e1a5f446a6364a29633d3f1ee16428d87c8d3851a1c570be8170b04c2"); //1259849
+        //consensus.defaultAssumeValid = uint256S("0x29c8c00e1a5f446a6364a29633d3f1ee16428d87c8d3851a1c570be8170b04c2"); //1259849
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -132,7 +133,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xa58c3dc45c902567682edae9a0f89717e917fb9377c4b86ead909b2416110fc6"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("miku.hackr.org", true);
+        vSeeds.emplace_back("neko.hackr.org", true);
         /*vSeeds.emplace_back("dnsseed.thrasher.io", true);
         vSeeds.emplace_back("dnsseed.litecointools.com", true);
         vSeeds.emplace_back("dnsseed.litecoinpool.org", true);
