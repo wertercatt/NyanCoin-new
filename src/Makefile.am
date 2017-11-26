@@ -70,7 +70,7 @@ if BUILD_BITCOIND
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += litecoin-cli litecoin-tx
+  bin_PROGRAMS += NyanCoin-cli NyanCoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
